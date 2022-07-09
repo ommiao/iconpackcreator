@@ -1,0 +1,57 @@
+<div>
+    <p style="text-indent: 2em;">自定义遮罩对于图标包的统一性有很强的作用，但是貌似只适合规则图标使用，不规则图标用什么样的遮罩可能都达不到很好的效果，只能依靠增加适配量。</p>
+    <p style="text-indent: 2em;">自定义遮罩其实是很简单的，不会做或者做出来效果不正确的只是不了解遮罩的基本原理，本篇教程的目的就是让自定义遮罩不再是个难题。</p>
+    <p style="text-indent: 2em;">首先要明白遮罩的意义，遮罩的目的是为了让没有适配的图标看起来也能和其他图标比较搭配，<font color="red">并不是</font>给所有已经适配的图标增加一些装饰效果。</p>
+    <p style="text-indent: 2em;">遮罩效果共分为三层，从下到上依次是背景层、对原图标的裁剪层以及前景层，三层叠加的效果就是最终看到的图标效果。所谓背景层，就是打个底，比如你的图标都是圆形，那么背景层就需要是个同样大小的圆形；而前景层则是覆盖在最上面的，比如说想在图标上显示一个玻璃反光效果，就需要把前景设置成玻璃反光的素材。</p>
+    <p style="text-indent: 2em;">背景层和前景层都没什么需要特别介绍的，下面着重讲解一下中间的裁剪层。</p>
+    <p style="text-indent: 2em;">遮罩编辑页面如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">下面我们来实践一下。裁剪层一般由黑色像素和透明像素构成，黑色代表原图标需要被裁剪掉的部分，透明代表原图标需要被保留的部分。下图是一个简单的圆形裁剪层，即中间圆形是透明的（<font color="red">透明不是白色</font>），四周是黑色的，如图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_mask.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">在没有设置背景和前景时，单独设置圆形裁剪层的效果如下：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_masked.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">可以看到，有些图标已经变成圆形了，而有些图标只是被裁剪掉了一部分，比如Fluent图标包的棱角。</p>
+    <p style="text-indent: 2em;">或者我们可以用一个极端的裁剪层测试遮罩效果，比如一个十字架形状，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_mask2.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">这个裁剪层的效果如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_masked2.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">有点意思吧，跟你想象中的一样吗？裁剪层理解了之后，下面的知识就很简单了。</p>
+    <p style="text-indent: 2em;">那么我们进一步操作，把遮罩的背景添加上，背景依然是最简单的白色圆形，<font color="red">这次真的是白色而不是透明</font>，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_back.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">再次打包，应用图标包测试一下效果，这里覆盖安装图标包后一定要在桌面设置里取消原来应用的图标包，然后退回桌面后重新进入设置应用图标包，否则可能不会看到新改动的效果，不出意外的话，效果如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_backed.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">此外，裁剪层会受到缩放比例的影响，我们继续用圆形遮罩进行测试。缩放比例是个小数，默认为1.0，即不进行缩放。这个参数的意义在于在裁剪前，先对原始图标做个缩放，然后对缩放后的图标进行裁剪，缩放是因为原图标大小不一，裁剪时可能有些会被裁剪有些不会被裁剪，统一缩放后裁剪效果会比较统一。下面分别是缩放比例为0.5、1.0和1.5时的效果：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_factor05.jpg"/>
+    </div>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_factor10.jpg"/>
+    </div>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_factor15.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">可以看到，缩放比例为0.5的Fluent图标棱角不会被裁掉了，而缩放比例为1.5的则被裁掉了更多。具体数值设置为多少就由你自行确定了。</p>
+    <p style="text-indent: 2em;">最后我们随便设置一个前景测试一下效果，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_upon.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">前景的效果如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_uponed.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">遮罩教程到此结束，相信你也可以轻松制作自己的专属遮罩了。</p>
+</div>

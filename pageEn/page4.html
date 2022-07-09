@@ -1,0 +1,57 @@
+<div>
+    <p style="text-indent: 2em;">The custom mask has a strong effect on the uniformity of the icon pack, but it seems to be only suitable for regular icons. What kind of masks for irregular icons may not achieve good results. You can only rely on increasing the amount of adaptation.</p>
+    <p style="text-indent: 2em;">Custom masks are actually very simple. What you don't do or do incorrectly is that you don't understand the basic principles of masks. The purpose of this tutorial is to make custom masks no longer a problem.</p>
+    <p style="text-indent: 2em;">First of all, we must understand the meaning of the mask. The purpose of the mask is to make the icons without adaptation look more compatible with other icons, <font color="red">not</font> to add some decorative effects to all the icons that have been adapted.</p>
+    <p style="text-indent: 2em;">The mask effect is divided into three layers, from bottom to top are the background layer, the cropping layer of the original icon and the foreground layer, the effect of the three layers superimposed is the icon effect finally seen. The so-called background layer is to make a bottom. For example, if your icons are all round, then the background layer needs to be a circle of the same size; and the foreground layer is covered on the top, for example, you want to display a glass-reflective effect on the icon, you need to set the foreground into glass reflective material.</p>
+    <p style="text-indent: 2em;">There is nothing in the background layer and foreground layer that need special introduction. The following focuses on the middle cropping layer.</p>
+    <p style="text-indent: 2em;">The mask editing page is shown below: </p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page4/preview_mask.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">Let's practice it below. The cropping layer is generally composed of black pixels and transparent pixels. Black represents the part of the original icon that needs to be cropped, and transparent represents the part of the original icon that needs to be retained. The following picture is a simple circular crop layer, that is, the middle circle is transparent (<font color="red">transparency is not white</font>), and the surrounding is black, as shown in the figure:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page4/preview_mask_mask.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">When the background and foreground are not set, the effect of setting the circular crop layer separately is as follows:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_masked.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">As you can see, some icons have become round, while some icons have only been cut out, such as the corners of the Fluent icon pack.</p>
+    <p style="text-indent: 2em;">Or we can use an extreme crop layer to test the mask effect, such as a cross shape, as shown below:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page4/preview_mask_mask2.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">The effect of this cropping layer is shown below:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_masked2.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">Interesting, is it the same as you think? After understanding the cropping layer, the following knowledge is very simple.</p>
+    <p style="text-indent: 2em;">So let's go further and add the background of the mask. The background is still the simplest white circle. This time it is <font color="red">really white instead of transparent</font>, as shown in the following figure:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page4/preview_mask_back.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">Export apk again, test the effect by applying the icon pack. After overwriting the icon pack, be sure to cancel the original application icon pack in the launcher settings, then return to the desktop and re-enter the launcher setting to select icon pack, otherwise you may not see the effect of the new changes. Without accident, the effect is shown in the following figure:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_backed.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">In addition, the cropping layer will be affected by the scale factor, we continue to test with a circular mask. The scale factor is a decimal, and the default is 1.0, which means no zooming. The significance of this parameter is that before cropping, the original icon is first zoomed, and then the zoomed icon is cropped. The zooming is because the original icon is different in size, and some may be cropped and some will not be cropped during cropping. After scale the cropping effect will be more uniform. The following are the effects when the scale factor is 0.5, 1.0 and 1.5:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_factor05.jpg"/>
+    </div>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_factor10.jpg"/>
+    </div>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_factor15.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">As you can see, the corners of the Fluent icon with a scale factor of 0.5 will not be cut off, while those with a scale factor of 1.5 will be cut off more. It is up to you to determine the specific value of scale factor.</p>
+    <p style="text-indent: 2em;">Finally, we randomly set a foreground to test the effect, as shown below:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page4/preview_mask_upon.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">The effect of the foreground is shown below:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page4/preview_mask_uponed.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">This is the end of the mask tutorial, I believe you can easily make your own mask.</p>
+</div>

@@ -1,0 +1,45 @@
+<div>
+    <p style="text-indent: 2em;">Dynamic icons probably only support calendars on third-party desktops, and calendars, weather, and clocks on OnePlus desktops. The following explanation will be in order from simple to complex.</p>
+    <p style="text-indent: 2em;">First, let's adapt the <span style="font-weight: bold;">common dynamic calendar</span>. The adaptation of the common dynamic calendar is divided into two simple steps.</p>
+    <p style="text-indent: 2em;">The first step is to collect all the adaptation items that need to be adapted to the dynamic calendar in a group, and name the icon of this group as "Calendar" (not the icon file named "Calendar", the name of the icon file is irrelevant ). For example, I have two calendar adaptation items that need to be adapted to the dynamic calendar, then there are two calendar adaptation items, as shown below:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page5/preview_calendar_icon_list.jpg"/>
+    </div>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page5/preview_calendar_adaptations.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">The second step is to select the icon on the dynamic icon editing page. The common dynamic calendar is composed of 31 icons, and each date will be displayed using the corresponding icon, and if there are not enough 31 icon files, it may not take effect, so be sure to select all the icons when testing.</p>
+    <p style="text-indent: 2em;">After selecting the calendar icon as shown below:</p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page5/preview_calendar_common.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">After the two-step operation is completed, export apk again and apply it to the desktop to see the effect.</p>
+    <p style="text-indent: 2em;"><span style="font-weight: bold;">Oneplus dynamic clock</span>is also very simple, only need to select three pictures, namely background, hour hand and minute hand, after selection, as shown below:</span></p>
+    <div class="text-center">
+        <img class="preview-img" src="./imgEn/page5/preview_clock.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">The following focuses on <span style="font-weight: bold;">Oneplus Dynamic Weather and Oneplus Dynamic Calendar</span>. These two dynamic icons are divided into two parts, one is icon resources and the other is dynamic text.</p>
+    <p style="text-indent: 2em;">The icon resource of Oneplus Dynamic Calendar has only one background, and the text shows the date of the day; the icon resource of Oneplus Dynamic Weather is 8 common weathers, and the text is the real-time temperature, which can be displayed or not.</p>
+    <p style="text-indent: 2em;">After selecting the icons of Oneplus Dynamic Weather and Calendar, as shown below:</p>
+    <div class="text-center">
+        <img class="preview-img preview-img-small" src="./imgEn/page5/preview_weather_calendar.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">In fact, after completing these operations, re-export the icon pack apk and apply it to the Oneplus launcher you can see the effect. The text style is the default white and centered, which may not match the icon you choose. If you have no effect after applying it, please pay attention to the output log when exporting. The processing steps of the icon will be reflected in detail. If it is detected icon resources is missing(or part of missing), the adaptation of the dynamic icon will be ignored and the log will be printed. The exception log is shown in the figure below:</p>
+    <div class="text-center">
+        <img class="preview-img preview-img-small" src="./imgEn/page5/preview_log_ignored.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">The meaning of the text style can be understood through the following table (if you use a browser to open and cannot see the contents of the table, please try to clear the browser cache and try again):</p>
+    <table class="table">
+        <thead>
+            <th class="text-center">Parameter</th>
+            <th class="text-center">Description</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in allTexts[language].dynamicParams">
+                <td style="vertical-align: middle">{{x.paramName}}</td>
+                <td>{{x.paramDesc}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="text-indent: 2em;">If you have the patience to see this, I believe that the adaptation of the dynamic icon has been done.</p>
+</div>

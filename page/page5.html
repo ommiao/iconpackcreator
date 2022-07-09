@@ -1,0 +1,45 @@
+<div>
+    <p style="text-indent: 2em;">动态图标在第三方桌面大概只支持日历，在一加桌面上则支持日历、天气和时钟。下面的讲解将会按照简单到复杂的顺序。</p>
+    <p style="text-indent: 2em;">首先来适配<span style="font-weight: bold;">常规动态日历</span>，常规动态日历的适配分为很简单的两步。</p>
+    <p style="text-indent: 2em;">第一步是把所有需要适配动态日历的适配项汇总在一组，并且将这一组的图标名称命名为“日历”（不是图标文件命名为“日历”，图标文件名称是无关紧要的），比如我有两个日历的适配项需要适配动态日历，那么日历的适配项就有两个，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page5/preview_calendar_icon_list.jpg"/>
+    </div>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page5/preview_calendar_adaptations.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">第二步就是在动态图标编辑页面选择图标。常规动态日历是由31个图标组成的，每个日期会使用对应的图标来展示，并且如果图标文件有缺失不够31张的话可能不会生效，因此测试时务必把所有图标都选择完毕。</p>
+    <p style="text-indent: 2em;">选择完日历图标后如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page5/preview_calendar_common.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">两步操作完成之后，再次打包，应用到桌面就可以看到效果了。</p>
+    <p style="text-indent: 2em;"><span style="font-weight: bold;">一加动态时钟</span>也是非常简单的，只需要选择三张图片，分别是背景、时针和分针，选择完毕后如下图所示：</span></p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page5/preview_clock.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">下面着重讲解一下<span style="font-weight: bold;">一加动态天气和一加动态日历</span>，这两种动态图标分为两部分，一部分是图标资源，一部分是动态的文字。</p>
+    <p style="text-indent: 2em;">一加动态日历的图标资源只有一个背景，而文字则是显示当天的日期；一加动态天气的图标资源是8种常见的天气，而文字则是实时的气温，气温可以选择显示或者不显示。</p>
+    <p style="text-indent: 2em;">一加动态天气和日历的图标选择完毕后，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img preview-img-small" src="./img/page5/preview_weather_calendar.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">其实完成了这些操作，重新打包图标包，应用到一加桌面后已经可以看到效果了。只是文字样式是默认的白色和居中，可能与你选择的图标资源不搭配，如果你应用后没有效果，那么请留意打包时的输出日志，对于图标的处理步骤会有详细的体现，如果检测到图标资源有缺失，则会忽略动态图标的适配并打印日志，异常日志如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img preview-img-small" src="./img/page5/preview_log_ignored.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">文字样式的含义则可通过下表了解（如果使用浏览器打开看不到表格内容请尝试清除浏览器缓存后重试）：</p>
+    <table class="table">
+        <thead>
+            <th class="text-center">参数名</th>
+            <th class="text-center">说明</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in allTexts[language].dynamicParams">
+                <td style="vertical-align: middle">{{x.paramName}}</td>
+                <td>{{x.paramDesc}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="text-indent: 2em;">如果你有耐心看到这里，相信已经搞定动态图标的适配了。</p>
+</div>

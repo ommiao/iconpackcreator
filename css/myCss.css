@@ -1,0 +1,29 @@
+.cloak{
+    display: none;
+}
+
+body{
+    background-color: #f5f6f8;
+}
+
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.no-border {
+    border: none;
+}
+
+.card .card-img-top{
+    border-radius: 0px;
+}
+
+.preview-img {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.preview-img-small {
+    width: 60%;
+}

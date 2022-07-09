@@ -1,0 +1,28 @@
+<div>
+    <p style="text-indent: 2em;">手动适配图标是很繁琐的，但是不使用本工具的图标包作者们更加痛苦，他们通常要维护一份几千行的适配项列表。为了进一步降低图标包制作成本，你可以使用闪电适配功能快速补充适配项和匹配图标。</p>
+    <p style="text-indent: 2em;">首先打开图标列表页面，此时图标列表寥寥无几。点击右上角的闪电按钮，选择“自动添加适配”，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page2/preview_auto_button.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">点击确定后，稍等片刻，你的所有应用都会显示在列表里了，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img preview-img-small" src="./img/page2/preiew_icon_list_no_icon.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">此时仅仅是为你的已安装应用添加了适配项，并没有选择图标，因此所有图标都是圆形占位图。</p>
+    <p style="text-indent: 2em;">此功能的强大之处在于，如果你新安装了一些应用，可以再次进行“自动添加适配”操作，工具将会把新安装的应用信息自动补全。</p>
+    <p style="text-indent: 2em;">如果你手中没有类似于从MIUI主题中提取的以包名为名称的图标文件，那么图标需要手动去选择，因为工具也不知道每个应用要使用哪个图标文件。如果你有以包名为名称的图标文件，那么可以进一步选择“自动匹配图标”，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img" src="./img/page2/preview_auto_button2.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">找到你的图片文件夹后，长按文件夹，稍等片刻，你会发现有些图标已经自动匹配了，匹配的完成度取决于图标文件对图标适配项的覆盖程度，如下图所示：</p>
+    <div class="text-center">
+        <img class="preview-img preview-img-small" src="./img/page2/preiew_icon_list_auto_icon.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">对于不能自动匹配的图标，仍然需要手动去选择一个图标，对于没有图标的适配项，打包时会自动忽略。</p>
+    <p style="text-indent: 2em;">接下来可以打包测试了，由于这已经不是第一次打包了，如果你在应用市场上架了图标包，那么更新前需要修改一下版本信息，否则你的用户可能无法接收到更新提示，这是Android系统的版本比对机制决定的。</p>
+    <p style="text-indent: 2em;">点击图标包卡片上的“编辑”按钮，选择“打包信息”，将会看到如下界面：</p>
+    <div class="text-center">
+        <img class="preview-img preview-img-small" src="./img/page2/preview_edit_pack_info.jpg"/>
+    </div>
+    <p style="text-indent: 2em;">其中Version Name是给用户展示的版本号，可以是任意的字符；Version Code则必须是数字，并且每次升级都要<font color="red">递增</font>，否则系统不会认为这是个新的安装包，<font color="red">如果递减的话则系统会直接提示安装失败</font>，降级安装是必须要卸载重装的。此处的申请适配邮箱可以改成自己的邮箱，这样你的用户可以在申请适配页面给你发送适配邮件。</p>
+</div>
