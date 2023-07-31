@@ -1,4 +1,4 @@
-<!-- 202306121723 -->
+<!-- 202307311531 -->
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp" ng-controller="myCtrl">
 
@@ -24,35 +24,35 @@
       <h5 class="card-title" style="font-weight:bold;">The new <font color="#0066FF">Icon Packer</font> is coming, this app has been <font color="red">deprecated</font>!</h5>
       <p class="card-text">Feel free to get it from Google Play: <a href="https://play.google.com/store/apps/details?id=cn.ommiao.iconpacker">link</a></p>
     </div>
-<!--    <div style="position: absolute; right: 20px; top: 20px;">-->
-<!--      <img ng-click="changeLanguage()" style="width: 30px; height: 30px;" src="{{language == 'English' ? './img/chinese.png' : './img/english.png'}}"/>-->
-<!--    </div>-->
-<!--    <div class="card-body">-->
-<!--      <h5 class="card-title" style="font-weight:bold;">{{allTexts[language].title}}</h5>-->
-<!--      <p class="card-text">{{allTexts[language].description}}</p>-->
-<!--    </div>-->
-<!--    <div class="card-body" ng-if="language == 'Chinese'">-->
-<!--      <span>最新版本已增加图标包克隆功能，该功能免费使用，可以将任意已安装图标包导入，喜欢这个功能可以购买模板支持或者仅捐赠，感谢支持！</span>-->
-<!--    </div>-->
-<!--    <div class="card-body" ng-if="language != 'Chinese'">-->
-<!--      <span>The new feature coming, now you can clone a icon pack from installed icon packs, please upgrade to the latest version!</span>-->
-<!--      <span>If you didn't buy my app from Google Play and got it from other platforms, please buy me a coffee by Paypal(The top-right corner of main page)</span>-->
-<!--      <span>If you want to install multiple icon packs at the same time, please send email to me after pay me from PayPal. Please click the button in the upper right corner of the homepage to view the details.</span>-->
-<!--    </div>-->
-<!--    <ul class="list-group list-group-flush">-->
-<!--      <a href="{{'#' + x.id}}" class="list-group-item no-border" ng-repeat="x in allTexts[language].menu">{{x.title}}</a>-->
-<!--    </ul>-->
-<!--    <div class="card-body">-->
-<!--      <a href="{{allTexts[language].appLink}}" class="card-link">{{allTexts[language].appLinkText}}</a>-->
-<!--    </div>-->
-<!--    <div id="{{x.id}}" class="card-body" ng-repeat="x in allTexts[language].menu">-->
-<!--      <p class="card-text" style="font-weight:bold;">{{x.title}}</p>-->
-<!--      <div ng-include="'./' + (language == 'English' ? 'pageEn' : 'page') + '/page' + ($index + 1) + '.html'"></div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div style="position: fixed; right: 20px; bottom: 20px;">-->
-<!--    <a href="#top" target="_self"><img style="width: 30px; height: 30px;" src="./img/goto_top.png"/></a>-->
-<!--  </div>-->
+    <div style="position: absolute; right: 20px; top: 20px;">
+      <img ng-click="changeLanguage()" style="width: 30px; height: 30px;" src="{{language == 'English' ? './img/chinese.png' : './img/english.png'}}"/>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" style="font-weight:bold;">{{allTexts[language].title}}</h5>
+      <p class="card-text">{{allTexts[language].description}}</p>
+    </div>
+    <div class="card-body" ng-if="language == 'Chinese'">
+      <span>最新版本已增加图标包克隆功能，该功能免费使用，可以将任意已安装图标包导入，喜欢这个功能可以购买模板支持或者仅捐赠，感谢支持！</span>
+    </div>
+    <div class="card-body" ng-if="language != 'Chinese'">
+      <span>The new feature coming, now you can clone a icon pack from installed icon packs, please upgrade to the latest version!</span>
+      <span>If you didn't buy my app from Google Play and got it from other platforms, please buy me a coffee by Paypal(The top-right corner of main page)</span>
+      <span>If you want to install multiple icon packs at the same time, please send email to me after pay me from PayPal. Please click the button in the upper right corner of the homepage to view the details.</span>
+    </div>
+    <ul class="list-group list-group-flush">
+      <a href="{{'#' + x.id}}" class="list-group-item no-border" ng-repeat="x in allTexts[language].menu">{{x.title}}</a>
+    </ul>
+    <div class="card-body">
+      <a href="{{allTexts[language].appLink}}" class="card-link">{{allTexts[language].appLinkText}}</a>
+    </div>
+    <div id="{{x.id}}" class="card-body" ng-repeat="x in allTexts[language].menu">
+      <p class="card-text" style="font-weight:bold;">{{x.title}}</p>
+      <div ng-include="'./' + (language == 'English' ? 'pageEn' : 'page') + '/page' + ($index + 1) + '.html'"></div>
+    </div>
+  </div>
+  <div style="position: fixed; right: 20px; bottom: 20px;">
+    <a href="#top" target="_self"><img style="width: 30px; height: 30px;" src="./img/goto_top.png"/></a>
+  </div>
 </body>
 
 </html>
